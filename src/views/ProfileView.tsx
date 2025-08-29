@@ -12,7 +12,7 @@ export default function ProfileView({ onOpenFilter = () => {} }: ProfileViewProp
         <div className="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center mb-3">
           <i className="ri-user-line text-3xl text-gray-400" />
         </div>
-        <h2 className="text-lg font-bold mb-1">민지</h2>
+        <h2 className="text-lg font-bold mb-1">게스트</h2>
         <p className="text-sm text-gray-600">한국어 학습 73일째</p>
         <div className="flex items-center gap-2 mt-3">
           <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full">
