@@ -3,9 +3,10 @@ import React from 'react';
 
 type ProfileViewProps = {
   onOpenFilter?: () => void; // 옵션
+  onLogout?: () => void; // ✅ 추가: 로그아웃 콜백
 };
 
-export default function ProfileView({ onOpenFilter = () => {} }: ProfileViewProps) {
+export default function ProfileView({ onOpenFilter = () => {}, onLogout }: ProfileViewProps) {
   return (
     <section className="mb-6">
       <div className="flex flex-col items-center mb-6 pt-4">
@@ -34,7 +35,8 @@ export default function ProfileView({ onOpenFilter = () => {} }: ProfileViewProp
         <RowButton icon="ri-settings-3-line" label="설정" onClick={() => {}} />
         <RowButton icon="ri-notification-line" label="알림" onClick={() => {}} />
         <RowButton icon="ri-question-line" label="도움말" onClick={() => {}} />
-        <RowButton icon="ri-logout-box-line" label="로그아웃" onClick={() => {}} />
+        {/* ✅ 실제 로그아웃 연결 */}
+        <RowButton icon="ri-logout-box-line" label="로그아웃" onClick={onLogout ?? (() => {})} />
       </div>
     </section>
   );

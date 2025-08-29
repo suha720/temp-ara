@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 임시 폰트 적용 구간 시작 */
+
+@font-face {
+  font-family: 'MiryangYeongnamru';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+
+/* 임시 폰트 적용 구간 끝 */
+
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +33,7 @@ html {
 }
 body {
   font-size: 16px;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'MiryangYeongnamru', 'Noto Sans KR', sans-serif;
 }
 
 /* 프로젝트 공통 유틸(선택) */
